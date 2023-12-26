@@ -1,3 +1,6 @@
+
+![AdriellyTI's GitHub stats](https://github-readme-stats.vercel.app/api?username=AdriellyTI&show_icons=true&theme=radical)
+
 # Olá! eu sou AdriellyTI 👋
 
 - 👩‍💻 **Full Stack Developer:** Trabalhando tanto no desenvolvimento de interfaces front-end quanto na lógica de servidor back-end.
