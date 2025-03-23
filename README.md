@@ -1,8 +1,13 @@
 <div>
   
-[![E-mail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:souzadrica2006@gmail.com)
-
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/souza_adri._)
+<p align="center">
+  <a href="mailto:souzadrica2006@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="E-mail" />
+  </a>
+  <a href="https://instagram.com/souza_adri._">
+    <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram" />
+  </a>
+</p>
 </div>
 # Olá! eu sou AdriellyTI 👋
 
