@@ -7,6 +7,10 @@
   <a href="https://instagram.com/souza_adri._">
     <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram" />
   </a>
+  <a href="https://www.linkedin.com/in/Adrielly-Silva">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+
 </p>
 </div>
 # Olá! eu sou AdriellyTI 👋
