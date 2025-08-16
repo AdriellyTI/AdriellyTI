@@ -42,7 +42,7 @@
 
 ### Educação
 
-- 🎓 ![Instituto Federal de Educação, Ciência e tecnologia do Amazonas](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://www2.ifam.edu.br/&ved=2ahUKEwjOgZDl4a2DAxUYppUCHXtmCYsQFnoECBIQAQ&usg=AOvVaw2KQU2G1573GJUZnB19NeD2): Ensino Médio Técnico Integrado em Informática (Ano de Conclusão).
+- 🎓 ![Instituto Federal de Educação, Ciência e tecnologia do Amazonas](http://www2.ifam.edu.br/&ved=2ahUKEwjOgZDl4a2DAxUYppUCHXtmCYsQFnoECBIQAQ&usg=AOvVaw2KQU2G1573GJUZnB19NeD2): Ensino Médio Técnico Integrado em Informática (Ano de Conclusão).
 
 
 ![AdriellyTI's GitHub stats](https://github-readme-stats.vercel.app/api?username=AdriellyTI&show_icons=true&theme=radical)
