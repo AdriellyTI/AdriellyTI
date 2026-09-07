@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfólio pessoal de Adrielly — desenvolvimento de software, Flutter, Java e projetos acadêmicos." />
+  <title>AdriellyTI — Portfólio</title>
+  <link rel="icon" href="assets/logo_2.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="cursor-glow"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#inicio">
+      <img src="assets/logo_2.ico" alt="Logo Flip" />
+      <span>Adrielly<span class="pink">TI</span></span>
+    </a>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" aria-label="Alternar tema">☾</button>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">OLÁ, EU SOU</p>
+        <h1>Adrielly <span class="pink">TI</span> 👋</h1>
+        <p class="hero-subtitle">
+          Desenvolvedora em formação, apaixonada por tecnologia, aprendizado
+          e por transformar ideias em projetos.
+        </p>
+        <div class="typing"><span id="typing"></span><span class="caret">|</span></div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projetos">Ver projetos</a>
+          <a class="btn ghost" href="#contato">Como me encontrar</a>
+        </div>
+      </div>
+
+      <div class="profile-wrap reveal">
+        <div class="profile-card">
+          <div class="profile-photo" id="profilePhoto">
+            <span>SEU<br>ROSTO</span>
+            <small>adicione sua foto</small>
+          </div>
+          <div class="profile-info">
+            <span class="status"><i></i> disponível para aprender e criar</span>
+            <h2>Adrielly Silva</h2>
+            <p>Full Stack Developer em formação • Estudante de Ciência da Computação</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="section-heading reveal">
+        <span>01</span>
+        <h2>Sobre mim</h2>
+      </div>
+      <div class="about-grid">
+        <article class="glass reveal">
+          <h3>Quem sou</h3>
+          <p>
+            Sou estudante de Ciência da Computação na UFAM e desenvolvedora em formação. Gosto de
+            aprender construindo: aplicativos, sistemas, bancos de dados e
+            projetos acadêmicos que transformam conceitos em algo prático.
+          </p>
+          <p>
+            Tenho interesse especial por desenvolvimento de software, Flutter,
+            Java e novas tecnologias. Também gosto de colaborar em projetos e
+            enfrentar desafios de programação.
+          </p>
+        </article>
+        <article class="glass fun-fact reveal">
+          <div class="cat-stage" id="catStage">
+            <img src="assets/cat.png" class="cat" id="cat" alt="Gatinha pixel art" />
+            <span class="spark s1">✦</span><span class="spark s2">✧</span>
+            <span class="speech" id="speech">miau! 🐾</span>
+          </div>
+          <h3>Um pouco além do código</h3>
+          <p>Entre um projeto e outro, sempre cabe um livro, um mangá, uma ideia nova — e uma gatinha pixel art.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="habilidades" class="section">
+      <div class="section-heading reveal"><span>02</span>
+        <h2>Habilidades & tecnologias</h2>
+      </div>
+      <div class="skills reveal">
+        <div class="skill"><b>Java</b><span>Desenvolvimento e POO</span></div>
+        <div class="skill"><b>Dart / Flutter</b><span>Apps e interfaces multiplataforma</span></div>
+        <div class="skill"><b>Banco de Dados</b><span>PostgreSQL, MySQL, modelagem</span></div>
+        <div class="skill"><b>Git / GitHub</b><span>Versionamento e colaboração</span></div>
+        <div class="skill"><b>Python</b><span>Dados, automação e projetos</span></div>
+        <div class="skill"><b>Figma / Canva</b><span>Design e prototipação</span></div>
+        <div class="skill"><b>Docker</b><span>Ambientes e aplicações containerizadas</span></div>
+        <div class="skill"><b>LaTeX / Overleaf</b><span>Relatórios e documentação</span></div>
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <div class="section-heading reveal"><span>03</span>
+        <h2>Projetos & ideias</h2>
+      </div>
+      <div class="projects">
+        <article class="project-card reveal"><span>01</span>
+          <h3>Inventory Management</h3>
+          <p>Aplicativo desktop de gerenciamento de estoque desenvolvido em equipe.</p><a
+            href="https://github.com/AdriellyTI/EstoqueInventory2" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </article>
+        <article class="project-card reveal"><span>02</span>
+          <h3>Cartoons</h3>
+          <p>Estudo com flash cards: o usuário transforma partes de um texto em cartões de estudo editáveis.</p><a
+            href="#contato">Em desenvolvimento</a>
+        </article>
+        <article class="project-card reveal"><span>03</span>
+          <h3>DataCon</h3>
+          <p>Projeto voltado a apoio à pesquisa e organização de etapas metodológicas.</p><a href="#contato">Conhecer
+            melhor</a>
+        </article>
+        <article class="project-card reveal"><span>04</span>
+          <h3>Pomodoro / Flip Clock</h3>
+          <p>Ideia de aplicativo web e mobile inspirado em Flip Clock, com foco em estudo e produtividade.</p><a
+            href="#contato">Ideia de projeto</a>
+        </article>
+        <article class="project-card reveal"><span>05</span>
+          <h3>GásAlerta</h3>
+          <p>Projeto com Arduino para monitoramento de gás, incluindo estrutura física produzida em 3D.</p><a
+            href="#contato">Projeto</a>
+        </article>
+        <article class="project-card reveal"><span>06</span>
+          <h3>MeuLixo</h3>
+          <p>Ideia de aplicativo voltado ao gerenciamento de resíduos e conscientização.</p><a
+            href="#contato">Projeto</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="hobbies" class="section">
+      <div class="section-heading reveal"><span>04</span>
+        <h2>Hobbies & interesses</h2>
+      </div>
+      <div class="hobbies reveal">
+        <div>📚 <b>Leitura</b><small>Mangás, light novels e histórias</small></div>
+        <div>💻 <b>Programação</b><small>Aprender criando projetos</small></div>
+        <div>🎨 <b>Design</b><small>Interfaces, ideias e criatividade</small></div>
+        <div>🧩 <b>Desafios</b><small>Resolver problemas e aprender conceitos</small></div>
+        <div>🔧 <b>Hardware</b><small>Arduino, Raspberry Pi e experimentos</small></div>
+        <div>🚀 <b>Novas ideias</b><small>Transformar conceitos em aplicações</small></div>
+      </div>
+    </section>
+
+    <section id="contato" class="section contact">
+      <div class="section-heading reveal"><span>05</span>
+        <h2>Como me encontrar</h2>
+      </div>
+      <p class="reveal">Alguns canais públicos já identificados no meu perfil. Outros podem ser adicionados depois.</p>
+      <div class="contacts reveal">
+        <a href="mailto:souzadrica2006@gmail.com"><b>✉ E-mail</b><span>souzadrica2006@gmail.com</span></a>
+        <a href="https://github.com/AdriellyTI" target="_blank" rel="noreferrer"><b>◉
+            GitHub</b><span>@AdriellyTI</span></a>
+        <a href="https://www.linkedin.com/in/adrielly-silva-6094aa283/" target="_blank" rel="noreferrer"><b>in
+            LinkedIn</b><span>@Adrielly-Silva</span></a>
+        <a href="https://instagram.com/souza_adri._" target="_blank" rel="noreferrer"><b>◎
+            Instagram</b><span>@souza_adri._</span></a>
+      </div>
+      <div class="extra-links reveal">
+        <span>+ Outros links para adicionar:</span>
+        <button data-placeholder="WhatsApp">WhatsApp</button>
+        <button data-placeholder="Discord">Discord</button>
+        <button data-placeholder="Telegram">Telegram</button>
+        <button data-placeholder="Portfólio">Portfólio</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/logo.png" alt="" />
+    <span>Feito com código, criatividade e um pouco de ✦</span>
+    <span>© <span id="year"></span> AdriellyTI</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
