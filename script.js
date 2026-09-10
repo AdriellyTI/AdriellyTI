@@ -71,25 +71,21 @@ setInterval(() => {
 
 const catContainer = document.querySelector("#easter-cat");
 
-let catY = window.innerHeight - 150;
-let catDirection = -1;
-let catSpeed = 0.5;
+let catY = 500;
+let catDirection = 1;
+let catSpeed = 0.15;
+
+const catMovement = 20;
 
 function moveCat() {
   catY += catDirection * catSpeed;
 
-  // Limite superior
-  if (catY <= 20) {
-    catY = 20;
-    catDirection = 1;
+  if (catY >= 500 + catMovement) {
+    catDirection = -1;
   }
 
-  // Limite inferior
-  const maxY = window.innerHeight - catContainer.offsetHeight - 20;
-
-  if (catY >= maxY) {
-    catY = maxY;
-    catDirection = -1;
+  if (catY <= 500 - catMovement) {
+    catDirection = 1;
   }
 
   catContainer.style.top = `${catY}px`;
