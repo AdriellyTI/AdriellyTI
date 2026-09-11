@@ -591,20 +591,133 @@ footer img {
 #easter-cat {
   position: fixed;
   left: 30px;
-  top: 0;
-
+  top: 150px;
   width: 58px;
   height: 58px;
-
-  z-index: 8888;
+  z-index: 9999;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
   pointer-events: auto;
+  transition: filter 0.2s ease;
+  will-change: left, top, transform;
+}
+
+#easter-cat:hover {
+  filter: drop-shadow(0 4px 12px rgba(245, 20, 141, 0.45));
 }
 
 #easter-cat-sprite {
   width: 100%;
   height: 100%;
-
   image-rendering: pixelated;
-
   display: block;
+  pointer-events: none;
+  transition: transform 0.15s ease;
+}
+
+/* Balão de fala */
+.cat-speech-bubble {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #2b1f32;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 13px;
+  border-radius: 14px;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(245, 20, 141, 0.25), 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid var(--pink, #f5148d);
+  pointer-events: none;
+  animation: catPop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 10000;
+}
+
+.cat-speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--pink, #f5148d) transparent transparent transparent;
+}
+
+.dark .cat-speech-bubble {
+  background: #1f1726;
+  color: #ffffff;
+  border-color: #f5148d;
+}
+
+/* Partículas ao clicar */
+.cat-particle {
+  position: fixed;
+  pointer-events: none;
+  font-size: 1.25rem;
+  z-index: 10001;
+  user-select: none;
+  animation: particleFloat 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes particleFloat {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.6) translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% - 30px)) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% - 65px)) scale(0.8);
+  }
+}
+
+/* Animação de pulo */
+.cat-jump {
+  animation: catJumpAnim 0.45s ease;
+}
+
+@keyframes catJumpAnim {
+  0% { transform: translateY(0) scale(1, 1); }
+  35% { transform: translateY(-28px) scale(0.9, 1.15); }
+  65% { transform: translateY(-30px) scale(1.05, 0.95); }
+  100% { transform: translateY(0) scale(1, 1); }
+}
+
+/* Contador de capturas */
+.cat-counter-badge {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(245, 20, 141, 0.3);
+  color: var(--pink, #f5148d);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(245, 20, 141, 0.18);
+  z-index: 8000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+  animation: catPop 0.3s ease;
+}
+
+.dark .cat-counter-badge {
+  background: rgba(31, 23, 38, 0.92);
+  border-color: rgba(245, 20, 141, 0.4);
+}
+
+@keyframes catPop {
+  0% { opacity: 0; transform: scale(0.7); }
+  100% { opacity: 1; transform: scale(1); }
 }

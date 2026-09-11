@@ -1,0 +1,17 @@
+﻿{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.*",
+      "**/node_modules/**",
+      "*firebase-adminsdk*.json",
+      "*-adminsdk-*.json",
+      "Rascunhos/**",
+      "firebase-admin-rest.js",
+      "info.md",
+      "README.md"
+    ]
+  }
+}
