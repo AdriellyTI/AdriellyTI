@@ -47,6 +47,26 @@ document.querySelectorAll(".extra-links button").forEach(btn => {
 });
 document.querySelector("#year").textContent = new Date().getFullYear();
 
+const profileSlides = document.querySelectorAll(".profile-slide");
+const profileDots = document.querySelectorAll(".profile-dot");
+
+let currentProfileSlide = 0;
+
+function changeProfileSlide() {
+  profileSlides[currentProfileSlide].classList.remove("active");
+  profileDots[currentProfileSlide].classList.remove("active");
+
+  currentProfileSlide++;
+
+  if (currentProfileSlide >= profileSlides.length) {
+    currentProfileSlide = 0;
+  }
+
+  profileSlides[currentProfileSlide].classList.add("active");
+  profileDots[currentProfileSlide].classList.add("active");
+}
+
+setInterval(changeProfileSlide, 4000);
 // ==========================================
 // EASTER CAT - INTERAÇÃO & MOVIMENTO
 // ==========================================
@@ -136,8 +156,8 @@ document.querySelector("#year").textContent = new Date().getFullYear();
     const bounds = getSafeBounds();
     const sideBias = Math.random() < 0.65;
     if (sideBias) {
-      targetX = Math.random() < 0.5 
-        ? bounds.minX + Math.random() * 80 
+      targetX = Math.random() < 0.5
+        ? bounds.minX + Math.random() * 80
         : bounds.maxX - Math.random() * 80;
     } else {
       targetX = bounds.minX + Math.random() * (bounds.maxX - bounds.minX);
