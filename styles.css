@@ -586,14 +586,19 @@ footer img {
   h1 {
     font-size: 3.5rem
   }
+
+  #easter-cat {
+    width: 72px;
+    height: 72px;
+  }
 }
 
 #easter-cat {
   position: fixed;
   left: 30px;
   top: 150px;
-  width: 58px;
-  height: 58px;
+  width: 88px;
+  height: 88px;
   z-index: 9999;
   cursor: pointer;
   user-select: none;

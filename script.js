@@ -59,11 +59,29 @@ document.querySelector("#year").textContent = new Date().getFullYear();
 
   if (!catContainer || !catSprite) return;
 
-  // Sprites organizados por estado
+  // Sprites organizados por estado (ciclos completos e contínuos sem gaps)
   const SPRITES = {
-    idle: ["assets/cat/idle/idle-1.png", "assets/cat/idle/idle-2.png"],
-    walk: ["assets/cat/walk/walk-1.png", "assets/cat/walk/walk-2.png", "assets/cat/walk/walk-3.png"],
-    run: ["assets/cat/run/run-1.png", "assets/cat/run/run-2.png", "assets/cat/run/run-3.png"]
+    idle: [
+      "assets/cat/idle/idle-1.png",
+      "assets/cat/idle/idle-2.png",
+      "assets/cat/idle/idle-3.png"
+    ],
+    walk: [
+      "assets/cat/walk/walk-1.png",
+      "assets/cat/walk/walk-2.png",
+      "assets/cat/walk/walk-3.png",
+      "assets/cat/walk/walk-2.png" // Ciclo suave de 4 tempos (evita pulo seco)
+    ],
+    run: [
+      "assets/cat/run/run-1.png",
+      "assets/cat/run/run-2.png",
+      "assets/cat/run/run-3.png",
+      "assets/cat/run/run-2.png" // Ciclo suave de corrida contínua
+    ],
+    jump: [
+      "assets/cat/jump/jump-1.png",
+      "assets/cat/jump/jump-2.png"
+    ]
   };
 
   // Frases conforme o número de capturas (Fase 6)
@@ -80,8 +98,8 @@ document.querySelector("#year").textContent = new Date().getFullYear();
 
   // Estado e posição
   let state = "idle"; // 'idle' | 'walk' | 'run' | 'jump' | 'paused'
-  let posX = Math.max(30, Math.min(window.innerWidth - 90, 80));
-  let posY = Math.max(120, Math.min(window.innerHeight - 150, 260));
+  let posX = Math.max(30, Math.min(window.innerWidth - 110, 80));
+  let posY = Math.max(120, Math.min(window.innerHeight - 180, 260));
   let targetX = posX;
   let targetY = posY;
   let facingRight = true;
@@ -103,7 +121,7 @@ document.querySelector("#year").textContent = new Date().getFullYear();
   // Obter limites seguros da tela
   function getSafeBounds() {
     const margin = 20;
-    const catSize = 65;
+    const catSize = window.innerWidth <= 600 ? 76 : 94;
     const navHeight = 70;
     return {
       minX: margin,
@@ -176,11 +194,13 @@ document.querySelector("#year").textContent = new Date().getFullYear();
       counterBadge.style.display = "flex";
     }
 
-    // Pulo e partículas
+    // Pulo, expressão e partículas
+    const centerOffset = window.innerWidth <= 600 ? 36 : 44;
+    catSprite.src = SPRITES.jump[1]; // Exclamação e surpresa!
     catContainer.classList.remove("cat-jump");
     void catContainer.offsetWidth; // reset reflow
     catContainer.classList.add("cat-jump");
-    spawnParticles(posX + 29, posY + 20);
+    spawnParticles(posX + centerOffset, posY + centerOffset - 10);
 
     // Mensagem de fala
     const msgIdx = Math.min(captures - 1, SPEECH_MESSAGES.length - 1);
@@ -198,15 +218,20 @@ document.querySelector("#year").textContent = new Date().getFullYear();
   // Loop de animação de frames dos sprites
   let lastFrameTime = 0;
   function updateSpriteAnimation(now) {
-    let frameRate = 750;
+    if (state === "paused") {
+      catSprite.style.transform = facingRight ? "scaleX(1)" : "scaleX(-1)";
+      return;
+    }
+
+    let frameRate = 700;
     let frames = SPRITES.idle;
 
     if (state === "walk") {
       frames = SPRITES.walk;
-      frameRate = 170;
+      frameRate = 160;
     } else if (state === "run") {
       frames = SPRITES.run;
-      frameRate = 100;
+      frameRate = 95;
     }
 
     if (now - lastFrameTime > frameRate) {
@@ -229,16 +254,17 @@ document.querySelector("#year").textContent = new Date().getFullYear();
 
     if (state !== "paused") {
       // 1. Percepção do cursor (fuga suave quando o mouse se aproxima em desktops)
-      const catCenterX = posX + 29;
-      const catCenterY = posY + 29;
+      const centerOffset = window.innerWidth <= 600 ? 36 : 44;
+      const catCenterX = posX + centerOffset;
+      const catCenterY = posY + centerOffset;
       const distToMouse = Math.hypot(mouseX - catCenterX, mouseY - catCenterY);
       const isDesktop = window.innerWidth > 700;
 
-      if (isDesktop && distToMouse < 110 && distToMouse > 0) {
+      if (isDesktop && distToMouse < 125 && distToMouse > 0) {
         isMouseNear = true;
         state = "run";
         const fleeAngle = Math.atan2(catCenterY - mouseY, catCenterX - mouseX);
-        const fleeSpeed = 220; // velocidade de corrida ao fugir
+        const fleeSpeed = 230; // velocidade de corrida ao fugir
 
         posX += Math.cos(fleeAngle) * fleeSpeed * dt;
         posY += Math.sin(fleeAngle) * fleeSpeed * dt;

@@ -1,4 +1,4 @@
-﻿# 🐱 Checklist — Easter Egg da Gatinha
+# 🐱 Checklist — Easter Egg da Gatinha
 
 ## 📌 Fase 1 — Planejamento
 - [x] Definir que a gatinha fará parte do site como um Easter Egg
@@ -35,22 +35,22 @@
 
 ### Animações
 - [x] Criar idle
-  - [x] Frame 1 (`assets/cat/idle/idle-1.png`)
-  - [x] Frame 2 (`assets/cat/idle/idle-2.png`)
-  - [ ] Frame 3
+  - [x] Frame 1 (`assets/cat/idle/idle-1.png` - 96x96 padronizado)
+  - [x] Frame 2 (`assets/cat/idle/idle-2.png` - 96x96 padronizado)
+  - [x] Frame 3 (`assets/cat/idle/idle-3.png` - 96x96 padronizado)
 - [x] Criar walk
   - [x] Frame 1 (`assets/cat/walk/walk-1.png`)
   - [x] Frame 2 (`assets/cat/walk/walk-2.png`)
   - [x] Frame 3 (`assets/cat/walk/walk-3.png`)
-  - [ ] Frame 4
+  - [x] Frame 4 (ciclo contínuo 1-2-3-2 sem gaps)
 - [x] Criar run
   - [x] Frame 1 (`assets/cat/run/run-1.png`)
   - [x] Frame 2 (`assets/cat/run/run-2.png`)
   - [x] Frame 3 (`assets/cat/run/run-3.png`)
-  - [ ] Frame 4
-- [ ] Criar jump
-  - [ ] Frame 1
-  - [ ] Frame 2
+  - [x] Frame 4 (ciclo contínuo 1-2-3-2 sem gaps)
+- [x] Criar jump
+  - [x] Frame 1 (`assets/cat/jump/jump-1.png` - pulo)
+  - [x] Frame 2 (`assets/cat/jump/jump-2.png` - surpresa/exclamação)
   - [ ] Frame 3
 - [ ] Expressões
   - [ ] happy
